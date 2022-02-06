@@ -1,6 +1,15 @@
 .remix{
-    background-color: aqua;
-    width: 32vw;
+    width: 35vw;
     margin: auto;
     margin-top: 25vh;
+    text-align: center;
+    color: #faab1b;
+}
+
+.remix2{
+    width: 50vw;
+    margin: auto;
+    margin-top: 1vh;
+    text-align: center;
+    color: #faab1b;
 }
