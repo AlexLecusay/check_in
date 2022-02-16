@@ -1,9 +1,9 @@
-export default function TopPage() {
+export default function TopPage(props: { blob: string}) {
     return (
-      <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-        <h1 className="remix">Welcome to Remix</h1>
-        <h1 className="remix2">SparkDev CheckIn 2020</h1>
-
-      </div>
+      <>
+        <img id="top-right-blob-events" src={props.blob} />
+        <img id="bottom-left-blob-events" src={props.blob} />
+        
+      </>
     );
   }
