@@ -3,7 +3,6 @@ export default function TopPage(props: { blob: string}) {
       <>
         <img id="top-right-blob-events" src={props.blob} />
         <img id="bottom-left-blob-events" src={props.blob} />
-        
       </>
     );
   }
