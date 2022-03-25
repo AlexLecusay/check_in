@@ -6,6 +6,11 @@ import TopPage from "~/components/TopPage";
 import topPageStyles from "~/styles/topPage.css"; 
 import blob1 from "~/img/blob1.svg";
 import Gui1 from "~/img/Gui Yellow.svg";
+import ExternalPage from "~/components/ExternalPage";
+import {
+  Link,
+  Links
+} from "remix";
 
 
 export let links: LinksFunction = () => {
@@ -29,7 +34,12 @@ export default function Index() {
       <div>
         <form className = "container">
           <h3 className = "containerHeader">CHECK-IN</h3>
-          <img className = "submit" src = {Gui1}/>
+          
+          <Link to = "ExternalPage.tsx">
+            <button className = "submit">
+            <img className = "Gui" src={Gui1}/>
+            </button>
+          </Link>
         </form>
         <br/>
         <br/>
@@ -37,5 +47,13 @@ export default function Index() {
       </div>
     </>
   );
+}
+
+function LoadPage(){
+  return (
+    <>
+      <ExternalPage blob = {blob1}/>
+    </>
+  )
 }
 
