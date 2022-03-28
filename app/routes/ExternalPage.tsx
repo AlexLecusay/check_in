@@ -12,13 +12,11 @@ export let links: LinksFunction = () => {
     ];
   };
 
-export default function ExternalPage(props: {blob: string}){
+export default function ExternalPage(){
     return(
         <>
-            <img id="top-right-blob-events" src={props.blob}/>
-            <img id="bottom-left-blob-events" src={props.blob}/>
-
-            <ExternalPage blob = {blob1}/>
+            <img id="top-right-blob-events" src={blob1}/>
+            <img id="bottom-left-blob-events" src={blob1}/>
         </>
     );
 }
