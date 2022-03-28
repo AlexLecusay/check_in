@@ -6,7 +6,7 @@ import TopPage from "~/components/TopPage";
 import topPageStyles from "~/styles/topPage.css"; 
 import blob1 from "~/img/blob1.svg";
 import Gui1 from "~/img/Gui Yellow.svg";
-import ExternalPage from "~/components/ExternalPage";
+import ExternalPage from "~/routes/ExternalPage";
 import {
   Link,
   Links
@@ -35,7 +35,7 @@ export default function Index() {
         <form className = "container">
           <h3 className = "containerHeader">CHECK-IN</h3>
           
-          <Link to = "ExternalPage.tsx">
+          <Link to = "/ExternalPage">
             <button className = "submit">
             <img className = "Gui" src={Gui1}/>
             </button>
