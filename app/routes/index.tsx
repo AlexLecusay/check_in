@@ -4,6 +4,7 @@ import { LinksFunction } from "remix";
 import globalStyles from "~/styles/global.css";
 import TopPage from "~/components/TopPage";
 import topPageStyles from "~/styles/topPage.css"; 
+import externalStyles from "~/styles/external.css";
 import blob1 from "~/img/blob1.svg";
 import Gui1 from "~/img/Gui Yellow.svg";
 import {
@@ -15,6 +16,7 @@ export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: globalStyles },
     { rel: "stylesheet", href: topPageStyles },
+    { rel: "stylesheet", href: externalStyles },
     { rel: "prefetch", href: blob1 },
     { rel: "prefetch", href: Gui1}
   ];

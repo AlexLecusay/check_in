@@ -2,6 +2,7 @@ import { LinksFunction } from "remix";
 
 import globalStyles from "~/styles/global.css";
 import TopPage from "~/components/TopPage";
+import externalStyles from "~/styles/external.css";
 import topPageStyles from "~/styles/topPage.css";
 import blob1 from "~/img/blob1.svg";
 import Gui1 from "~/img/Gui Yellow.svg";
@@ -11,6 +12,7 @@ export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: globalStyles },
     { rel: "stylesheet", href: topPageStyles },
+    { rel: "stylesheet", href: externalStyles },
     { rel: "prefetch", href: blob1 },
     { rel: "prefetch", href: Gui1 },
   ];
@@ -47,42 +49,33 @@ export default function ExternalPage() {
         <div>
           <h1 className="containerHeader"> General Body Meeting </h1>
           <form onSubmit={submitHandler}>
-            <label className="formField">
-              Full Name:<br></br>
-              <input
-                type="text"
-                ref={nameRef}
-                style={{ border: "white", borderRadius: 25, boxShadow: 5 }}
-              />
-            </label>
 
-            <label className="formField">
-              Email:<br></br>
+            <p className="formField">
+              Full Name:</p>
               <input
+              className="textField"
                 type="text"
-                ref={emailRef}
-                style={{ border: "white", borderRadius: 25 }}
-              />
-            </label>
+                ref={nameRef} />
+            
 
-            <label className="formField">
-              Discord:<br></br>
+            <p className="formField">
+              Email:</p>
               <input
+              className="textField"
                 type="text"
-                ref={discordRef}
-                style={{ border: "white", borderRadius: 25 }}
-              />
-            </label>
+                ref={emailRef}/>
+            
+
+            <p className="formField">
+              Discord:</p>
+              <input
+              className="textField"
+                type="text"
+                ref={discordRef}/>
+            
             <button
-              type="submit"
-              style={{
-                background: "linear-gradient(144.13deg, #FEFE00, #F6BD30)",
-                border: "#faab1b",
-                width: 200,
-                borderRadius: 25,
-                color: "white",
-              }}
-            >
+            className="submitBtn"
+              type="submit">
               Submit
             </button>
           </form>
