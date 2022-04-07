@@ -1,0 +1,7 @@
+.Gui2{
+    margin: auto;
+    position: static;
+    height: 50%;
+    width: 50%;
+    transform: translate(45%, 15%);
+}

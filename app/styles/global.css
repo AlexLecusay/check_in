@@ -291,15 +291,27 @@ button {
   position: relative;
   text-align: center;
   font-size: 210%;
+  margin: auto;
+  display: auto;
+  white-space: nowrap;
+}
+
+@media screen and (min-width < 400px ){
+  .container {
+    background-color: red;
+  }
 }
 
 .container{
-  background-color: rgba(116, 112, 112, 0.55);
+  background-color: rgba(75, 73, 73, 0.55);
   margin: auto;
-  width: 50%;
-  height: 35%;
+  width: 36vw;
+  height: 50%;
   position: relative;
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
   border-radius: 25px;
+  box-sizing: content-box;
 }
 
 .submit{
@@ -307,9 +319,8 @@ button {
   margin: none;
   height: 85%;
   width: 85%;
-  -ms-transform: translate(8%, -18%);
-  transform: translate(8%, -18%);
-  border-radius: 150px;
+  -ms-transform: translate(8%, 0%);
+  transform: translate(8%, 0%);
   box-shadow: none;
   border-style: none;
   outline: none;
@@ -329,9 +340,32 @@ button {
 .waterMark{
   color:rgba(255, 255, 255, 1);
   text-align: center;
+  -ms-transform: translateY(500%);
+  transform: translateY(500%);
 }
 
 .containerDiv{
-  height: 800px;
+  height: 650px;
   margin: auto;
+  margin-top: -10vh;
+}
+
+
+/**External Website CSS**/
+
+
+.formField{
+  color:rgba(255, 255, 255, 1);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
+  position: left;
+  text-align: left;
+  font-size: 170%;
+}
+
+input{
+  width: 80%;
+  padding: 6px 10px;
+  margin: 12px 0;
+  box-sizing: border-box;
 }

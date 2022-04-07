@@ -3,7 +3,7 @@ import { LinksFunction } from "remix";
 
 import globalStyles from "~/styles/global.css";
 import TopPage from "~/components/TopPage";
-import topPageStyles from "~/styles/topPage.css"; 
+import topPageStyles from "~/styles/topPage.css";
 import blob1 from "~/img/blob1.svg";
 import Gui1 from "~/img/Gui Yellow.svg";
 import {
@@ -33,8 +33,7 @@ export default function Index() {
       <div className = "containerDiv">
         <form className = "container">
           <h3 className = "containerHeader">CHECK-IN</h3>
-          
-          <Link to = "/ExternalPage" className = "redirect">
+          <Link to = "/ExternalPage">
             <button className = "submit">
 
             <img className = "Gui" src={Gui1}/>

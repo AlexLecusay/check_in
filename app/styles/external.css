@@ -1,0 +1,60 @@
+.containerH{
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.box{
+    height: 450px;
+    padding: auto;
+    text-align: center;
+    font-family: "Poppins";
+    width: 50vw;
+    background-color: #353535;
+    border-radius: 60px;
+    margin: auto;
+    margin-top: -5vh;
+}
+
+.Header{
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.textField{
+    border: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.formField{
+    border: white;
+    margin-left: 5vw;
+    font-size: 20px;
+}
+
+.submitBtn{
+    margin: auto;
+    background: linear-gradient(to bottom right, #FEFE00, #cd9303);
+    border: #faab1b;
+    width: 30vw;
+    height: 38px;
+    border-radius: 25px;
+    color: rgba(0,0,0, 1);
+    width: 80%;
+    font-weight: 600;
+    font-size: 18px;
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    cursor: pointer;
+}
