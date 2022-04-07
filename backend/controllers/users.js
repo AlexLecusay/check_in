@@ -37,12 +37,15 @@ exports.checkInInternal = async (req, res, next) => {
     return next(new HttpError('Could not check you in'));
   }
 
-  res.status(200).json({
-    message:
-      addedUser?.length > 0 && addedEvent?.length > 0
-        ? 'Successfully checked in.'
-        : 'Already checked in.',
-  });
+  if (addedUser?.length > 0 && addedEvent?.length > 0) {
+    res.status(200).json({
+      message: 'Successfully checked in.',
+    });
+  } else {
+    res.status(400).json({
+      message: 'Already checked in.',
+    });
+  }
 };
 
 exports.checkInExternal = async (req, res, next) => {
@@ -86,10 +89,13 @@ exports.checkInExternal = async (req, res, next) => {
     return next(new HttpError('Could not check you in'));
   }
 
-  res.status(200).json({
-    message:
-      addedUser?.length > 0 && addedEvent?.length > 0
-        ? 'Successfully checked in.'
-        : 'Already checked in.',
-  });
+  if (addedUser?.length > 0 && addedEvent?.length > 0) {
+    res.status(200).json({
+      message: 'Successfully checked in.',
+    });
+  } else {
+    res.status(400).json({
+      message: 'Already checked in.',
+    });
+  }
 };
