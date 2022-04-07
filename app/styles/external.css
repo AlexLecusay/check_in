@@ -1,0 +1,41 @@
+.containerHeader{
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    width: 25vw;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.box{
+    height: 75vh;
+    width: 50vw;
+    border-radius: 60px;
+    margin-top: -5vh;
+}
+
+.textField{
+    border: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.formField{
+    border: white;
+    margin-left: 5vw;
+    font-size: 20px;
+}
+
+.submitBtn{
+    margin-top: 5vh;
+    background: linear-gradient(to bottom right, #FEFE00, #cd9303);
+    border: #faab1b;
+    width: 30vw;
+    height: 7vh;
+    border-radius: 25px;
+    color: black;
+
+      
+}

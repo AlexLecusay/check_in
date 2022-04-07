@@ -16,6 +16,7 @@ export let links: LinksFunction = () => {
     { rel: 'stylesheet', href: externalStyles },
     { rel: 'prefetch', href: blob1 },
     { rel: 'prefetch', href: Gui1 },
+
   ];
 };
 
@@ -23,6 +24,7 @@ export default function ExternalPage() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const discordRef = useRef<HTMLInputElement>(null);
+
   const [showConfetti, setShowConfetti] = useState(false);
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
@@ -59,6 +61,7 @@ export default function ExternalPage() {
             <p className='formField'>Discord:</p>
             <input className='textField' type='text' ref={discordRef} />
             <button className='submitBtn' type='submit'>
+
               Submit
             </button>
           </form>
@@ -73,6 +76,7 @@ export default function ExternalPage() {
         height={1500}
         recycle={false}
       />
+
     </>
   );
 }
