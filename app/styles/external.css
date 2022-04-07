@@ -1,3 +1,6 @@
+.Gui{
+    margin-left: 8vw;
+}
 .containerHeader{
     margin: auto;
     margin-top: 15vh;
@@ -11,8 +14,8 @@
     height: 75vh;
     width: 50vw;
     border-radius: 60px;
-    margin-top: -5vh;
 }
+
 
 .textField{
     border: white;
@@ -29,13 +32,107 @@
 }
 
 .submitBtn{
-    margin-top: 5vh;
+    margin-top: 7vh;
     background: linear-gradient(to bottom right, #FEFE00, #cd9303);
     border: #faab1b;
-    width: 30vw;
-    height: 7vh;
+    width: 40vw;
+    height: 5vh;
     border-radius: 25px;
     color: black;
-
-      
+    font-weight: 500;
 }
+
+.Gui{
+    position: static;
+    margin: auto;
+    height: 50%;
+    width: 70%;
+    margin-left: 7vw;
+  }
+  
+  .waterMark{
+    color:rgba(255, 255, 255, 1);
+    text-align: center;
+  }
+  
+  .containerDiv{
+    height: 800px;
+    margin: auto;
+  }
+  
+  
+  /**External Website CSS**/
+  
+  .box{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    font-family: "Poppins";
+    border-radius: 25px;
+    width: 50%;
+    background-color: #353535;
+  }
+  
+  .formField{
+    color:rgba(255, 255, 255, 1);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%);
+    position: left;
+    text-align: left;
+    font-size: 170%;
+    border: white;
+    margin-left: 5vw;
+    font-size: 20px;
+  }
+  
+  input{
+    width: 80%;
+    padding: 6px 10px;
+    margin: 12px 0;
+   box-sizing: border-box;
+  }
+  .header {
+    color:rgba(255, 255, 255, 1);
+    margin: auto;
+    position: relative;
+    font-size: 60%;
+    text-align: center;
+  }
+  
+  .containerHeader{
+    color:rgba(255, 255, 255, 1);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%);
+    position: relative;
+    text-align: center;
+    font-size: 210%;
+  }
+  
+  .container{
+    background-color: rgba(75, 73, 73, 0.55);
+    margin: auto;
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+    border-radius: 25px;
+    margin-top: -10vh;
+  }
+  
+  .submit{
+    position: static;
+    margin: none;
+    height: 85%;
+    width: 85%;
+    -ms-transform: translate(8%, -18%);
+    transform: translate(8%, -18%);
+    border-radius: 150px;
+    box-shadow: none;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  
