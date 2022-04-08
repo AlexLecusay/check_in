@@ -1,14 +1,12 @@
 import { LinksFunction } from 'remix';
-
 import globalStyles from '~/styles/global.css';
 import TopPage from '~/components/TopPage';
 import externalStyles from '~/styles/external.css';
 import topPageStyles from '~/styles/topPage.css';
 import blob1 from '~/img/blob1.svg';
 import Gui1 from '~/img/Gui Yellow.svg';
-import { useRef, useState, FormEvent } from 'react';
-import { Link } from "remix";
-import Confetti from 'react-confetti';
+import { useRef, FormEvent } from 'react';
+import { useNavigate } from 'remix';
 
 export let links: LinksFunction = () => {
   return [
@@ -17,7 +15,6 @@ export let links: LinksFunction = () => {
     { rel: 'stylesheet', href: externalStyles },
     { rel: 'prefetch', href: blob1 },
     { rel: 'prefetch', href: Gui1 },
-
   ];
 };
 
@@ -25,8 +22,7 @@ export default function ExternalPage() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const discordRef = useRef<HTMLInputElement>(null);
-
-  const [showConfetti, setShowConfetti] = useState(false);
+  const navigate = useNavigate();
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -42,9 +38,7 @@ export default function ExternalPage() {
         body: JSON.stringify({ name, email, discordId, eventId }),
       }
     );
-    if (response.ok) setShowConfetti(true);
-    const data = await response.json();
-    console.log(data);
+    if (response.ok) navigate('SuccessPage');
   };
 
   return (
@@ -61,26 +55,12 @@ export default function ExternalPage() {
             <input className='textField' type='email' ref={emailRef} />
             <p className='formField'>Discord:</p>
             <input className='textField' type='text' ref={discordRef} />
-            <Link to = "/SuccessPage" className = "redirect">
             <button className='submitBtn' type='submit'>
               Submit
             </button>
-            </Link>
           </form>
         </div>
       </div>
-      <Confetti
-        className='confetti'
-        gravity={0.05}
-        run={showConfetti}
-        numberOfPieces={500}
-        width={1500}
-        height={1500}
-        recycle={false}
-      />
     </>
   );
 }
-
-
-
