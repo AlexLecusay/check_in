@@ -7,6 +7,8 @@ import blob1 from '~/img/blob1.svg';
 import Gui1 from '~/img/Gui Yellow.svg';
 import { useRef, FormEvent } from 'react';
 import { useNavigate } from 'remix';
+import { Link } from "remix";
+
 
 export let links: LinksFunction = () => {
   return [
@@ -55,9 +57,11 @@ export default function ExternalPage() {
             <input className='textField' type='email' ref={emailRef} />
             <p className='formField'>Discord:</p>
             <input className='textField' type='text' ref={discordRef} />
+            <Link to = "/SuccessPage">
             <button className='submitBtn' type='submit'>
               Submit
             </button>
+            </Link>
           </form>
         </div>
       </div>
